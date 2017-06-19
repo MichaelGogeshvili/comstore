@@ -23,10 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </div>
   <div class="page-header container">
-    <div class="jumbotron row">
+    <div class="row">
       <div class="col-md-12">
-        <fieldset class="container">
-          <div class="col-md-11">
 			  <div class="btn-group" style="width:100%;">
 				<div class="btn btn-lg btn-warning" >
 					  &lt;-Закупка
@@ -35,8 +33,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					  Реализация-&gt;
 				</div>
 			  </div>
-          </div>
-        </fieldset>
       </div>
     </div>
     <p class="col-md-12 footer">Page rendered in 
