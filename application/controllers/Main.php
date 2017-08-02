@@ -21,8 +21,15 @@ class Main extends assisted\Controller {
         return['heading'=>'@', 'title'=>'@'];
       });
       
-      default: redirect('main/index');
+    default: 
+      $Z = func_get_args() ?:  $this->input->post();
+      print_r($Z);
+      exit;
+      redirect('main/index');
     }
+  }
+  private function _processPost(){
+    ///todo
   }
   public function purchase () {
     //
