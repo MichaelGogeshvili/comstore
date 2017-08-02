@@ -9,5 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script src="/js/bootstrap.js"></script>
 </head>
 <body>
+  <div class="jumbotron text-center">
+    Здесь будет приложение
+  </div>
 </body>
 </html>
