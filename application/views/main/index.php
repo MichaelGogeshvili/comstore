@@ -18,6 +18,12 @@
       <header class="container lowered row-fluid">
         <div class="jumbotron text-center">
           HWB boilerplate
+          <ul class="menu">
+                <li>
+                  <?=anchor('main/acquisition', 'acquisition',
+                  array('title' => site_url('main/acquisition')))?>
+                </li>
+          </ul>
         </div>
       </header>
       <section class="container">
@@ -26,7 +32,7 @@
         <h1 class="text-center">Main</h1>
       </section>
       <footer  class="container lowered row-fluid">
-        <div   class="jumbotron text-left col-offset-3 col-md-9">
+        <div   class="jumbotron text-left">
           elapsed_time:{elapsed_time};<br>
           memory_usage:{memory_usage};
         </div>

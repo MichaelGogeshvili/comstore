@@ -12,11 +12,6 @@
   </head>
   <body>
     <main class="container">
-      <header class="container lowered row-fluid">
-        <div class="jumbotron text-center">
-          HWB boilerplate
-        </div>
-      </header>
       <section class="container">
         <h1 class="text-center">Zakupka</h1>
         <form action="" method="post">
@@ -57,12 +52,6 @@
           </table>
         </form>
       </section>
-      <footer  class="container lowered row-fluid">
-        <div   class="jumbotron text-left col-offset-3 col-md-9">
-          elapsed_time:{elapsed_time};<br>
-          memory_usage:{memory_usage};
-        </div>
-      </footer>
     </main>
   </body>
 </html>
