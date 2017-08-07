@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script async="true" src="http://127.0.0.1:9001/js/socket.js"> </script>
+
 <meta charset="utf-8">
 <title>Error</title>
 <style type="text/css">

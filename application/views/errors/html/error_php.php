@@ -1,8 +1,7 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 
 <div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<script async="true" src="http://127.0.0.1:9001/js/socket.js"> </script>
 
 <h4>A PHP Error was encountered</h4>
 

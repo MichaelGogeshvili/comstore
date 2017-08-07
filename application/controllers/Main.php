@@ -7,25 +7,29 @@ class Main extends assisted\Controller {
     parent::__construct();
     $this->load->helper('url');
   }
-  public function index() { 
+  public function index() {
     $this->_v_r( function(){
       return['heading'=>'@', 'title'=>'@'];
-    });  
+    });
   }
   public function acquisition () {
-    $MET = $this->input->method(TRUE); 
-    $MET = strtoupper($MET);
-    switch($MET){
-    case 'GET': 
-      return $this->_v_r( function(){ 
+    if( stristr($this->input->method(TRUE), 'GET')!==false) {
+      return $this->_v_r( function(){
         return['heading'=>'@', 'title'=>'@'];
       });
-      
-    default: 
-      $Z = func_get_args() ?:  $this->input->post();
-      print_r($Z);
-      exit;
-      redirect('main/index');
+    }
+    if( stristr($this->input->method(TRUE), 'POST')!==false) {
+      if(true) {
+        header('Content-type:text/plain');
+      }
+      if(true) {
+        $items = $this->load->model('Items');
+        $id = $this->Items->insert($this->input->post());
+        fprintf($stderr, "XXX");
+        //var_dump($id);
+        //var_dump(__LINE__);exit;
+      }
+      redirect('main/acquisition');
     }
   }
   private function _processPost(){

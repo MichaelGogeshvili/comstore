@@ -154,3 +154,20 @@ ini_set('display_startup_errors', 1);
  * LOAD THE BOOTSTRAP FILE
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+echo <<<EOS
+    <a class="btn btn-primary" href="javascript:ADDSYNC()">Switch ON
+    browser-sync</a>
+    <script>
+    function ADDSYNC() {
+      var src = document.createElement("script");
+      src.src = "http://127.0.0.1:9001/js/socket.js";
+      src.async = true;
+      document.body.appendChild(src);
+    }
+    </script>
+EOS;
+set_error_handler(function(){
+    print_r(func_get_args());
+});
+
+

@@ -1,0 +1,20 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/michaelgogeshvili/comstore",
+  "authors": [
+    "Michael Gogeshvili <thatisnotthecase@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "angular/bower-angular#^1.6.5"
+  }
+}
