@@ -6,43 +6,25 @@ class Main extends assisted\Controller {
   public function __construct() {
     parent::__construct();
     $this->load->helper('url');
+    $this->load->model('Item');
+    $this->load->library('session');
   }
   public function index() {
-    $this->_v_r( function(){
+    $this->conventionView( function(){
       return['heading'=>'@', 'title'=>'@'];
     });
   }
   public function acquisition () {
-    if( stristr($this->input->method(TRUE), 'GET')!==false) {
-      return $this->_v_r( function(){
-        return['heading'=>'@', 'title'=>'@'];
-      });
-    }
-    if( stristr($this->input->method(TRUE), 'POST')!==false) {
-      if(true) {
-        header('Content-type:text/plain');
-      }
-      if(true) {
-        $items = $this->load->model('Items');
-        $id = $this->Items->insert($this->input->post());
-        fprintf($stderr, "XXX");
-        //var_dump($id);
-        //var_dump(__LINE__);exit;
-      }
+    $this->on(['GET', 'POST'], function($t) {
+      $t->load->view('main/acquisition', ['heading'=>'@', 'title'=>'@']);
+    }, function($t) {
+      $id = $t->Item->insert($data = $t->input->post());
+      //$r [] = $id; foreach($data as $e) $r []= $e;
+      $t->session->set_flashdata('msg', 'Record Inserted: ');
       redirect('main/acquisition');
-    }
+      #print_r($id);
+    });
   }
-  private function _processPost(){
-    ///todo
-  }
-  public function purchase () {
-    //
-  }
-  public function login() {
-    //todo
-  }
-  public function logout() {
-    ///todo
-  }
+
 }
 

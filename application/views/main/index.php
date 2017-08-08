@@ -20,7 +20,8 @@
           HWB boilerplate
           <ul class="menu">
                 <li>
-                  <?=anchor('main/acquisition', 'acquisition',
+                  <?=anchor('main/acquisition',
+                  site_url('main/acquisition'),
                   array('title' => site_url('main/acquisition')))?>
                 </li>
           </ul>

@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="/css/theme.css">
   </head>
   <body>
+  <?php if($this->session->flashdata('msg')): ?>
+    <div class="alert alert-info">
+      <?php echo $this->session->flashdata('msg');?>
+      <a class="pull-right">&times;</a>
+    </div >
+    <?php endif; ?>
     <main class="container">
       <section class="container">
         <h1 class="text-center">Zakupka</h1>
