@@ -32,7 +32,12 @@ class Item extends CI_Model {
 
     public function get_all($fields = '', $where = array(), $table = '', $limit = '', $order_by = '', $group_by = '') {
         $data = array();
-#        if ($fields != '') { $this->db->select($fields); } if (count($where)) { $this->db->where($where); } if ($table != '') { $this->table_name = $table; } if ($limit != '') { $this->db->limit($limit); } if ($order_by != '') { $this->db->order_by($order_by); } if ($group_by != '') { $this->db->group_by($group_by); }
+#       if ($fields != '') { $this->db->select($fields); }
+#       if (count($where)) { $this->db->where($where); }
+#       if ($table != '') { $this->table_name = $table; }
+#       if ($limit != '') { $this->db->limit($limit); }
+#       if ($order_by != '') { $this->db->order_by($order_by); }
+#       if ($group_by != '') { $this->db->group_by($group_by); }
         $Q = $this->db->get($this->table_name);
         if ($Q->num_rows() > 0) {
             foreach ($Q->result_array() as $row) {
@@ -69,5 +74,10 @@ class Item extends CI_Model {
         return $this->db->delete($this->table_name);
     }
 
-///////
+    public function getLastId() {
+        //$this->db->select('MAX(id)');
+        //$Q = $this->db->get($this->table_name);
+        //$Q->num_rows()
+        return 1;
+    }
 }

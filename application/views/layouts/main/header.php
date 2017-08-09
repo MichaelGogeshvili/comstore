@@ -8,10 +8,10 @@
     <title><?=@$title?></title>
     <link rel="stylesheet" href="/css/theme.css">
   </head>
-  <body>
+  <body style="padding-top:130px!important;">
     <main class="container">
       <header class="container lowered row-fluid">
-        <div class="jumbotron navbar-fixed-top">
+        <div class="jumbotron navbar-fixed-top" style="opacity:.2">
              <?=anchor('home', 'HOME', array('title' =>
                                              'HOME','class'=>'navbar-link
                                              navbar-left
