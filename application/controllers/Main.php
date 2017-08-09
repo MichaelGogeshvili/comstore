@@ -10,17 +10,20 @@ class Main extends assisted\Controller {
     $this->load->library('session');
   }
   public function index() {
+    $this->load->view('layouts/main/header');
     $this->conventionView( function(){
-      return['heading'=>'@', 'title'=>'@'];
+      return['heading'=>'main', 'title'=>'main'];
     });
+    $this->load->view('layouts/main/footer');
   }
   public function acquisition () {
     $this->on(['GET', 'POST'], function($t) {
+      $t->load->view('layouts/main/header');
       $t->load->view('main/acquisition', ['heading'=>'@', 'title'=>'@']);
+      $t->load->view('layouts/main/footer');
     }, function($t) {
       $id = $t->Item->insert($data = $t->input->post());
-      //$r [] = $id; foreach($data as $e) $r []= $e;
-      $t->session->set_flashdata('msg', 'Record Inserted: ');
+      $t->session->set_flashdata('msg', 'Record Inserted.' );
       redirect('main/acquisition');
       #print_r($id);
     });
