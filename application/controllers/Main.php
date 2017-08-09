@@ -18,12 +18,12 @@ class Main extends assisted\Controller {
   }
   public function acquisition () {
     $lastId = $this->Item->getLastId();
-    $lastId = 0;
+    //$lastId = 0;
     $this->on(['GET', 'POST'], function($t) use($lastId) {
       $t->load->view('layouts/main/header');
       $R = [
         'heading'=>'@', 'title'=>'@',
-        '@'=>$lastId,
+        'lastId'=>$lastId,
       ];
       $t->load->view('main/acquisition', $R);
       $t->load->view('layouts/main/footer');

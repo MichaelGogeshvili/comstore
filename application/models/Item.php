@@ -75,9 +75,11 @@ class Item extends CI_Model {
     }
 
     public function getLastId() {
-        //$this->db->select('MAX(id)');
-        //$Q = $this->db->get($this->table_name);
-        //$Q->num_rows()
-        return 1;
+        $this->db->select('MAX(id)');
+        $Q = $this->db->get($this->table_name);
+        
+        $ret =  $Q->result_array()[0];
+        return intVal((array_values($ret)[0]));
+
     }
 }
