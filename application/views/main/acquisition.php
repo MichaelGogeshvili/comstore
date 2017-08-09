@@ -9,9 +9,13 @@
     </div >
     <?php endif; ?>
       <section class="container">
-        <h1 class="text-center">acquisition</h1>
-        <form action="" method="post">
-          <table class="om" style=''>
+        <form action="" method="post" style="border:1px solid
+        black;padding:3em;border-radius:13px;">
+          <table class="om"
+          >
+            <caption>
+              <h1 class="text-center">acquisition, next id: <?=$lastId + 1; ?></h1>
+            </caption>
             <tr class="margined">
               <td class="text-right bm">  articul  </td>
               <td> <input class="text-center wide-input" 
@@ -21,8 +25,7 @@
             <tr>
               <td class="text-right bm">  description  </td>
               <td> <textarea class="text-center wide-input"
-              name="description"> 
-              </textarea></td>
+              name="description" ></textarea></td>
             </tr>
             <tr>
               <td class="text-right bm">  price  </td>
